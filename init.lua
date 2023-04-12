@@ -193,13 +193,14 @@ require('lazy').setup({
 -- See `:help vim.o`
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = ''
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -218,6 +219,10 @@ vim.o.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
+
+-- set exrc "execute .vimrc of the current folder if there is one
+-- set paste in case pase is weird
+vim.api.nvim_set_option_value("colorcolumn", "80", {})
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -261,7 +266,15 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    file_ignore_patterns = {
+      ".git/",
+    }
   },
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
 }
 
 -- Enable telescope fzf native, if installed
