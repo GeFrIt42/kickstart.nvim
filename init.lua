@@ -268,7 +268,9 @@ require('telescope').setup {
     },
     file_ignore_patterns = {
       ".git/",
-    }
+    },
+    -- file_ignore_patterns = {".git/", ".cache", "%.o", "%.a", "%.out", "%.class",
+		-- "%.pdf", "%.mkv", "%.mp4", "%.zip"},
   },
   pickers = {
     find_files = {
