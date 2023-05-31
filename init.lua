@@ -116,7 +116,15 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'delek'
+      --vim.cmd.colorscheme 'blue'
+      --vim.cmd.colorscheme 'evening'
+      --vim.cmd.colorscheme 'morning'
+      --vim.cmd.colorscheme 'peachpull'
+      vim.cmd.colorscheme 'slate'
+      --vim.cmd.colorscheme 'molokai'
+      --vim.cmd.colorscheme 'morning'
     end,
   },
 
