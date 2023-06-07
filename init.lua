@@ -211,6 +211,8 @@ vim.o.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = ''
+-- show traling characters
+vim.o.list = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -438,7 +440,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-
+  -- pylsp = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
